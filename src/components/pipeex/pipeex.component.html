@@ -1,0 +1,31 @@
+<h1>Example of <span style="color: blue;"> {{title()}}</span></h1>
+<h2>Name is {{firstName | uppercase}}</h2>
+<h2>Name is {{firstName | lowercase}}</h2>
+<h2>Name is {{firstName | titlecase}}</h2>
+<h2>Date is {{currentDate | date:'dd-MMM-yy'}}</h2>
+<!-- <p>{{userList$ | async | json}}</p> -->
+
+<button (click)="updateSignal()">UpdateSingle</button>
+
+<div class="table">
+    <table border="1px">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>UserId</th>
+                <th>title</th>
+                <th>body</th>
+            </tr>
+        </thead>
+        <tbody>
+            @for(items of userList$ | async; track $index){
+                <tr>
+                    <td>{{items.id}}</td>
+                    <td>{{items.userId}}</td>
+                    <td>{{items.title}}</td>
+                    <td>{{items.body}}</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

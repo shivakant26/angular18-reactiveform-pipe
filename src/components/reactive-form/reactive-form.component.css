@@ -1,0 +1,22 @@
+.form-wr{
+    width: 500px;
+    margin: 50px auto;
+} 
+.form-field{
+    margin-bottom: 20px;
+}
+input[type="text"]{
+    padding: 8px 20px;
+
+}
+.btn{
+    background-color: rgb(65, 65, 4);
+    color: #fff;
+    padding: 8px 20px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+}  
+.error span{
+    color: Red;
+}
